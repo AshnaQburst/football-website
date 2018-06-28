@@ -33,24 +33,24 @@ body{
     background: white;
     padding: 5px 15px;
     display: inline-block;
-    min-width: 40px;
+    min-width: 105px;
     min-height: 20px;
     text-align: center;
 }
 .country-name::before{
     content: "";
-    width: 20px;
+    width: 7px;
     height: 1px;
     background: white;
     position: absolute;
     top: 50%;
 }
-.country-name-left::before{ right:-20px;}
-.country-name-right::before{right: 70px;}
+.country-name-left::before{ right:-7px;}
+.country-name-right::before{right: 135px;}
 .country-name-quarter-left{
     position: relative;
     top: 39px;
-    left: 34px;
+    left: 11px;
 }
 .country-name-quarter-left::before{
     content: "";
@@ -59,14 +59,14 @@ body{
     height: 60px;
     background: white;
     top: -14px;
-    left: -19px;
+    left: -10px;
 }
 .country-name-quarter-left::after{
     content: "";
     position: absolute;
-    width: 115px;
+    width: 153px;
     height: 1px;
-    right: -26px;
+    right: -9px;
     background: white;
     top: 50%;
 }
@@ -74,7 +74,7 @@ body{
 .country-name-quarter-right{
     position: relative;
     top: -35px;
-    right: 50px;
+    right: 15px;
 }
 .country-name-quarter-right::before{
     content: "";
@@ -83,20 +83,20 @@ body{
     height: 70px;
     background: white;
     top: -20px;
-    left: 100px;
+    left: 142px;
 }
 .country-name-quarter-right::after{
     content: "";
     position: absolute;
-    width: 130px;
+    width: 150px;
     height: 1px;
-    right: -30px;
+    right: -8px;
     background: white;
     top: 50%;
 }
 .country-name-semi-left{
     top: 95px;
-    left: 85px;
+    left: 25px;
 }
 .country-name-semi-left::before{
     content: "";
@@ -105,20 +105,20 @@ body{
     height: 116px;
     background: white;
     top: -41px;
-    left: -30px;
+    left: -11px;
 }
 .country-name-semi-left::after{
     content: "";
     position: absolute;
-    width: 30px;
+    width: 18px;
     height: 1px;
-    right: 70px;
+    right: 128px;
     background: white;
     top: 50%;
 }
 .country-name-semi-right{
     top: 27px;
-    left: -105px;
+    left: -35px;
 }
 .country-name-semi-right::before{
     content: "";
@@ -127,22 +127,37 @@ body{
     height: 116px;
     background: white;
     top: -47px;
-    left: 94px;
+    left: 147px;
 }
 .country-name-semi-right::after{
     content: "";
     position: absolute;
-    width: 30px;
+    width: 13px;
     height: 1px;
-    right: -25px;
+    right: -13px;
     background: white;
     top: 50%;
 }
 .country-name-final-left{
     top: 205px;
-    left: 10%;
+    left: 3%;
 }
 .country-name-final-right{
     top: 135px;
-    right: 10%;
+    right: 5%;
+}
+
+/* gallery list */
+.gallery-list{
+    padding: 0px;
+    list-style: none;
+}
+.gallery-list li{
+    display: block;
+    float: left;
+    padding: 5px;
+}
+.gallery-list li img{
+    height: 150px;
+    width: auto;
 }
