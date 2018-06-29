@@ -1,202 +1,238 @@
-body{
-    margin: 0px;
-    padding: 0px;
+body {
+  margin: 0px;
+  padding: 0px;
 }
-.text-center{ text-align: center;}
-.text-white{color: white;}
-.relative{position: relative;}
-.pull-right{float: right;}
+.text-center {
+  text-align: center;
+}
+.text-white {
+  color: white;
+}
+.relative {
+  position: relative;
+}
+.pull-right {
+  float: right;
+}
+.cp {
+  cursor: pointer;
+}
 
 /* spacing */
-.mt-30{ margin-top: 30px;}
-.mt-15{margin-top: 15px;}
-
-.body-wrapper{
-    height: 100vh;
-    /* width: 100%; */
-    background: url(../images/body-bg.jpeg);
-    background-repeat: no-repeat;
-    background-size: cover;
-    padding: 20px 30px;
+.mt-30 {
+  margin-top: 30px;
 }
-.col-20{
-    width: 20%;
-    float: left;
-    display: block;
-}
-.col-40{
-    width: 20%;
-    float: left;
-    display: block;
-}
-.country-name{
-    background: white;
-    padding: 5px 15px;
-    display: inline-block;
-    min-width: 105px;
-    min-height: 20px;
-    text-align: center;
-}
-.country-name span{ vertical-align: sub;}
-.country-name::before{
-    content: "";
-    width: 7px;
-    height: 1px;
-    background: white;
-    position: absolute;
-    top: 50%;
-}
-.country-name-left::before{ right:-7px;}
-.country-name-right::before{right: 135px;}
-.country-name-quarter-left{
-    position: relative;
-    top: 39px;
-    left: 11px;
-}
-.country-name-quarter-left::before{
-    content: "";
-    position: absolute;
-    width: 1px;
-    height: 60px;
-    background: white;
-    top: -11px;
-    left: -9px;
-}
-.country-name-quarter-left::after{
-    content: "";
-    position: absolute;
-    width: 153px;
-    height: 1px;
-    right: -9px;
-    background: white;
-    top: 50%;
+.mt-15 {
+  margin-top: 15px;
 }
 
-.country-name-quarter-right{
-    position: relative;
-    top: -35px;
-    right: 15px;
+.body-wrapper {
+  height: 100vh;
+  /* width: 100%; */
+  background: url(../images/body-bg.jpeg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 20px 30px;
 }
-.country-name-quarter-right::before{
-    content: "";
-    position: absolute;
-    width: 1px;
-    height: 70px;
-    background: white;
-    top: -20px;
-    left: 142px;
+.col-50 {
+  width: 50%;
+  display: inline-block;
+  float: left;
 }
-.country-name-quarter-right::after{
-    content: "";
-    position: absolute;
-    width: 150px;
-    height: 1px;
-    right: -8px;
-    background: white;
-    top: 50%;
+.col-40 {
+  width: 20%;
+  float: left;
+  display: block;
 }
-.country-name-semi-left{
-    top: 95px;
-    left: 25px;
+.country-name {
+  background: white;
+  padding: 5px 15px;
+  display: inline-block;
+  min-width: 105px;
+  min-height: 20px;
+  text-align: center;
 }
-.country-name-semi-left::before{
-    content: "";
-    position: absolute;
-    width: 1px;
-    height: 116px;
-    background: white;
-    top: -41px;
-    left: -11px;
+.country-name span {
+  vertical-align: sub;
 }
-.country-name-semi-left::after{
-    content: "";
-    position: absolute;
-    width: 18px;
-    height: 1px;
-    right: 128px;
-    background: white;
-    top: 50%;
+.country-name::before {
+  content: "";
+  width: 7px;
+  height: 1px;
+  background: white;
+  position: absolute;
+  top: 50%;
 }
-.country-name-semi-right{
-    top: 27px;
-    left: -35px;
+.country-name-left::before {
+  right: -7px;
 }
-.country-name-semi-right::before{
-    content: "";
-    position: absolute;
-    width: 1px;
-    height: 116px;
-    background: white;
-    top: -47px;
-    left: 147px;
+.country-name-right::before {
+  right: 135px;
 }
-.country-name-semi-right::after{
-    content: "";
-    position: absolute;
-    width: 13px;
-    height: 1px;
-    right: -13px;
-    background: white;
-    top: 50%;
+.country-name-quarter-left {
+  position: relative;
+  top: 39px;
+  left: 11px;
 }
-.country-name-final-left{
-    top: 205px;
-    left: 3%;
+.country-name-quarter-left::before {
+  content: "";
+  position: absolute;
+  width: 1px;
+  height: 60px;
+  background: white;
+  top: -11px;
+  left: -9px;
 }
-.country-name-final-right{
-    top: 135px;
-    right: 5%;
+.country-name-quarter-left::after {
+  content: "";
+  position: absolute;
+  width: 153px;
+  height: 1px;
+  right: -9px;
+  background: white;
+  top: 50%;
+}
+
+.country-name-quarter-right {
+  position: relative;
+  top: -35px;
+  right: 15px;
+}
+.country-name-quarter-right::before {
+  content: "";
+  position: absolute;
+  width: 1px;
+  height: 70px;
+  background: white;
+  top: -20px;
+  left: 142px;
+}
+.country-name-quarter-right::after {
+  content: "";
+  position: absolute;
+  width: 150px;
+  height: 1px;
+  right: -8px;
+  background: white;
+  top: 50%;
+}
+.country-name-semi-left {
+  top: 95px;
+  left: 25px;
+}
+.country-name-semi-left::before {
+  content: "";
+  position: absolute;
+  width: 1px;
+  height: 116px;
+  background: white;
+  top: -41px;
+  left: -11px;
+}
+.country-name-semi-left::after {
+  content: "";
+  position: absolute;
+  width: 18px;
+  height: 1px;
+  right: 128px;
+  background: white;
+  top: 50%;
+}
+.country-name-semi-right {
+  top: 27px;
+  left: -35px;
+}
+.country-name-semi-right::before {
+  content: "";
+  position: absolute;
+  width: 1px;
+  height: 116px;
+  background: white;
+  top: -47px;
+  left: 147px;
+}
+.country-name-semi-right::after {
+  content: "";
+  position: absolute;
+  width: 13px;
+  height: 1px;
+  right: -13px;
+  background: white;
+  top: 50%;
+}
+.country-name-final-left {
+  top: 205px;
+  left: 3%;
+}
+.country-name-final-right {
+  top: 135px;
+  right: 5%;
 }
 
 /* gallery list */
-.gallery-list{
-    padding: 0px;
-    list-style: none;
+.gallery-list {
+  padding: 0px;
+  list-style: none;
 }
-.gallery-list li{
-    display: block;
-    float: left;
-    padding: 5px;
+.gallery-list li {
+  display: block;
+  float: left;
+  padding: 5px;
 }
-.gallery-list li img{
-    height: 150px;
-    width: auto;
+.gallery-list li img {
+  height: 150px;
+  width: auto;
 }
 
 /* modal popup */
 .modal {
-    display: none; /* Hidden by default */
-    position: fixed; /* Stay in place */
-    z-index: 1; /* Sit on top */
-    left: 0;
-    top: 0;
-    width: 100%; /* Full width */
-    height: 100%; /* Full height */
-    overflow: auto; /* Enable scroll if needed */
-    background-color: rgb(0,0,0); /* Fallback color */
-    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgb(0, 0, 0);
+  background-color: rgba(0, 0, 0, 0.4);
 }
 
 /* Modal Content/Box */
 .modal-content {
-    background-color: #fefefe;
-    margin: 15% auto; /* 15% from the top and centered */
-    padding: 20px;
-    border: 1px solid #888;
-    width: 80%; /* Could be more or less, depending on screen size */
+  background-color: #fefefe;
+  margin: 15% auto;
+  padding: 10px;
+  border: 1px solid #888;
+  width: 80%;
+  clear: both;
+  overflow: auto;
 }
 
 /* The Close Button */
 .close {
-    color: #aaa;
-    float: right;
-    font-size: 28px;
-    font-weight: bold;
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+  display: none;
 }
 
 .close:hover,
 .close:focus {
-    color: black;
-    text-decoration: none;
-    cursor: pointer;
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/* related images popup */
+.related img {
+  height: 100px;
+  width: auto;
+  padding:0px 5px 10px 5px;
+}
+.main img {
+  width: 100%;
+  height: auto;
+  /* padding: 0px 7.5px; */
 }
