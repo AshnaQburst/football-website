@@ -25,14 +25,28 @@ body {
 .mt-15 {
   margin-top: 15px;
 }
-
+.header {
+  position: fixed;
+  text-align: center;
+  width: 100%;
+  background: #d60926;
+}
+.header a p {
+  position: absolute;
+  top: 5px;
+  right: 65px;
+}
+.header h1 a {
+  text-decoration: none;
+  color: #fff;
+}
 .body-wrapper {
   height: 100vh;
-  /* width: 100%; */
   background: url(../images/body-bg.jpeg);
   background-repeat: no-repeat;
   background-size: cover;
-  padding: 20px 30px;
+  background-position: 0px 25px;
+  padding: 60px 30px 20px 30px;
 }
 .col-50 {
   width: 50%;
@@ -171,7 +185,7 @@ body {
 
 /* gallery list */
 .gallery-list {
-  padding: 0px;
+  padding: 77px 0px 0px 0px;
   list-style: none;
 }
 .gallery-list li {
@@ -229,14 +243,12 @@ body {
 .related img {
   height: 100px;
   width: auto;
-  padding:0px 5px 10px 5px;
+  padding: 0px 5px 10px 5px;
 }
 .main img {
   width: 100%;
   height: auto;
-  /* padding: 0px 7.5px; */
 }
-
 
 .slideshow-container {
   max-width: 1000px;
@@ -244,9 +256,10 @@ body {
   margin: auto;
 }
 .mySlides {
-    display: none;
+  display: none;
 }
-.prev, .next {
+.prev,
+.next {
   cursor: pointer;
   position: absolute;
   top: 50%;
@@ -265,22 +278,9 @@ body {
   right: 0;
   border-radius: 3px 0 0 3px;
 }
-.prev:hover, .next:hover {
-  background-color: rgba(0,0,0,0.8);
-}
-.dot {
-  cursor: pointer;
-  height: 15px;
-  width: 15px;
-  margin: 0 2px;
-  background-color: #bbb;
-  border-radius: 50%;
-  display: inline-block;
-  transition: background-color 0.6s ease;
-}
-
-.active, .dot:hover {
-  background-color: #717171;
+.prev:hover,
+.next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
 }
 .fade {
   -webkit-animation-name: fade;
@@ -290,11 +290,19 @@ body {
 }
 
 @-webkit-keyframes fade {
-  from {opacity: .4} 
-  to {opacity: 1}
+  from {
+    opacity: 0.4;
+  }
+  to {
+    opacity: 1;
+  }
 }
 
 @keyframes fade {
-  from {opacity: .4} 
-  to {opacity: 1}
+  from {
+    opacity: 0.4;
+  }
+  to {
+    opacity: 1;
+  }
 }
