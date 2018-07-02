@@ -204,8 +204,6 @@ $(document).ready(function() {
 
   var modal = document.getElementById("myModal");
 
-  var span = document.getElementsByClassName("close");
-
   $(".gallery-item").on("click", function() {
     modal.style.display = "block";
     pos = $(this).attr("id");
@@ -213,9 +211,24 @@ $(document).ready(function() {
     $.each(data.items, function(i, f) {
       if (i == pos - 1) {
         $(".modal-content").append(
-          " <span class='close'>&times;</span><div class='col-50 main'> <img src='" +
+          " <div class='col-50 main'> <div class='slideshow-container'>  <div class='mySlides fade'><img src='" +
             f.related[0].url1 +
-            "'></div><div class='col-50 related'><img src='" +
+            "' style='width:100%'>" +
+            "</div>" +
+            "<div class='mySlides fade'>  <img src='" +
+            f.related[0].url2 +
+            "' style='width:100%'> </div>" +
+            "<div class='mySlides fade'>  <img src='" +
+            f.related[0].url3 +
+            "' style='width:100%'> </div>" +
+            "<a class='prev' onclick='" +
+            plusSlides(-1) +
+            "'>&#10094;</a>" +
+            "<a class='next' onclick='" +
+            plusSlides(1) +
+            "'>&#10095;</a>" +
+            "</div>" +
+            "<div class='col-50 related'><img src='" +
             f.related[0].url2 +
             "'><img src='" +
             f.related[0].url3 +
@@ -225,21 +238,7 @@ $(document).ready(function() {
         );
       }
     });
-    $(document).keydown(function(e) {
-      if (e.keyCode == 37) {
-        alert("left pressed");
-        return false;
-      }
-      if (e.keyCode == 39) {
-        alert("right pressed");
-        return false;
-      }
-    });
   });
-
-  span.onclick = function() {
-    modal.style.display = "none";
-  };
 
   window.onclick = function(event) {
     if (event.target == modal) {
@@ -247,4 +246,32 @@ $(document).ready(function() {
       $(".modal-content").empty();
     }
   };
+
+  var slideIndex = 1;
+  showSlides(slideIndex);
+
+  // Next/previous controls
+  function plusSlides(n) {
+    showSlides((slideIndex += n));
+  }
+
+  function showSlides(n) {
+    var i;
+    var slides = document.getElementsByClassName("mySlides");
+    var dots = document.getElementsByClassName("dot");
+    if (n > slides.length) {
+      slideIndex = 1;
+    }
+    if (n < 1) {
+      slideIndex = slides.length;
+    }
+    for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";
+    }
+    for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+    }
+    slides[slideIndex - 1].style.display = "block";
+    dots[slideIndex - 1].className += " active";
+  }
 });
