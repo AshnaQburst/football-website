@@ -1,6 +1,11 @@
+@font-face {
+  font-family: "dusha";
+  src: url(../fonts/fifa-world-cup-russia-2018-dusha/Dusha_-_FIFA_World_Cup_2018.ttf);
+}
 body {
   margin: 0px;
   padding: 0px;
+  font-family: "dusha";
 }
 .text-center {
   text-align: center;
@@ -23,7 +28,7 @@ body {
 .block {
   display: block !important;
 }
-.no-cursor{
+.no-cursor {
   cursor: not-allowed;
 }
 /* spacing */
@@ -78,6 +83,7 @@ body {
   min-width: 105px;
   min-height: 20px;
   text-align: center;
+  border-radius: 4px;
 }
 .country-name span {
   vertical-align: sub;
@@ -105,19 +111,20 @@ body {
   content: "";
   position: absolute;
   width: 1px;
-  height: 60px;
+  height: 61px;
   background: white;
   top: -11px;
-  left: -9px;
+  left: -8px;
 }
 .country-name-quarter-left::after {
   content: "";
   position: absolute;
   width: 153px;
   height: 1px;
-  right: -9px;
+  right: -10px;
   background: white;
   top: 50%;
+  /* z-index: -1; */
 }
 
 .country-name-quarter-right {
@@ -129,9 +136,9 @@ body {
   content: "";
   position: absolute;
   width: 1px;
-  height: 70px;
+  height: 74px;
   background: white;
-  top: -20px;
+  top: -22px;
   left: 142px;
 }
 .country-name-quarter-right::after {
@@ -151,15 +158,15 @@ body {
   content: "";
   position: absolute;
   width: 1px;
-  height: 116px;
+  height: 118px;
   background: white;
-  top: -41px;
-  left: -11px;
+  top: -40px;
+  left: -8px;
 }
 .country-name-semi-left::after {
   content: "";
   position: absolute;
-  width: 18px;
+  width: 15px;
   height: 1px;
   right: 128px;
   background: white;
@@ -173,7 +180,7 @@ body {
   content: "";
   position: absolute;
   width: 1px;
-  height: 116px;
+  height: 120px;
   background: white;
   top: -47px;
   left: 147px;
@@ -195,7 +202,12 @@ body {
   top: 135px;
   right: 5%;
 }
-
+.score {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  color: rgb(205, 8, 36);
+}
 /* gallery list */
 .gallery-list {
   padding: 77px 0px 0px 0px;
@@ -246,7 +258,6 @@ body {
   top: 7px;
   right: 7px;
 }
-
 
 /* related images popup */
 .related img {
