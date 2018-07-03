@@ -192,6 +192,7 @@ var data = {
 };
 
 $(document).ready(function() {
+  // populate the gallery item
   $.each(data.items, function(i, f) {
     $("ul").append(
       "<li class='gallery-item cp' id='" +
@@ -206,35 +207,31 @@ $(document).ready(function() {
 
   $(".gallery-item").on("click", function() {
     modal.style.display = "block";
-    pos = $(this).attr("id");
-    console.log(pos - 1);
-    $.each(data.items, function(i, f) {
-      if (i == pos - 1) {
-        $(".modal-content").append(
-          "<div class='col-50 main'> <div class='slideshow-container'> <div class='mySlides fade'><img src='" +
-            f.related[0].url1 +
-            "' style='width:100%'>" +
-            "</div>" +
-            "<div class='mySlides fade'>  <img src='" +
-            f.related[0].url2 +
-            "' style='width:100%'> </div>" +
-            "<div class='mySlides fade'>  <img src='" +
-            f.related[0].url3 +
-            "' style='width:100%'> </div> <a class='prev' onclick='" +
-            plusSlides(-1) +
-            "'> &#10094; </a>  <a class='next' onclick='" +
-            plusSlides(1) +
-            "'>&#10095;</a> </div></div>" +
-            "<div class='col-50 related'><img src='" +
-            f.related[0].url2 +
-            "'><img src='" +
-            f.related[0].url3 +
-            "'><img src='" +
-            f.related[0].url4 +
-            "'></div>"
-        );
-      }
-    });
+    var pos = $(this).attr("id");
+    var index = data.items[pos - 1];
+
+    $(".modal-content").append(
+      "<div class='col-50 main'> <div class='slideshow-container'> <img class='mySlides fade' src='" +
+        index.related[0].url1 +
+        "' style='width:100%'>" +
+        " <img class='mySlides fade' src='" +
+        index.related[0].url2 +
+        "' style='width:100%'>" +
+        "  <img class='mySlides fade' src='" +
+        index.related[0].url3 +
+        "' style='width:100%'> <a class='prev' onclick='" +
+        plusDivs(-1) +
+        "'> &#10094; </a>  <a class='next' onclick='" +
+        plusDivs(+1) +
+        "'>&#10095;</a> </div></div>" +
+        "<div class='col-50 related'><img src='" +
+        index.related[0].url2 +
+        "'><img src='" +
+        index.related[0].url3 +
+        "'><img src='" +
+        index.related[0].url4 +
+        "'></div>"
+    );
   });
 
   window.onclick = function(event) {
@@ -245,26 +242,24 @@ $(document).ready(function() {
   };
 });
 var slideIndex = 1;
-showSlides(slideIndex);
+showDivs(slideIndex);
 
-// Next/previous controls
-function plusSlides(n) {
-  showSlides((slideIndex += n));
+function plusDivs(n) {
+  showDivs((slideIndex += n));
 }
 
-function showSlides(n) {
+function showDivs(n) {
   var i;
-  var slides = document.getElementsByClassName("mySlides");
-  console.log("slides.length", slides.length);
-  if (n > slides.length) {
+  var x = document.getElementsByClassName("mySlides");
+  console.log(x);
+  if (n > x.length) {
     slideIndex = 1;
   }
   if (n < 1) {
-    slideIndex = slides.length;
+    slideIndex = x.length;
   }
-  for (i = 0; i < slides.length; i++) {
-    slides[i].style.display = "none";
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none";
   }
-
-  slides[slideIndex - 1].style.display = "block";
+  x[slideIndex - 1].style.display = "block";
 }
