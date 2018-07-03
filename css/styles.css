@@ -17,7 +17,15 @@ body {
 .cp {
   cursor: pointer;
 }
-
+.hide {
+  display: none;
+}
+.block {
+  display: block !important;
+}
+.no-cursor{
+  cursor: not-allowed;
+}
 /* spacing */
 .mt-30 {
   margin-top: 30px;
@@ -33,8 +41,13 @@ body {
 }
 .header a p {
   position: absolute;
-  top: 5px;
+  top: 0px;
   right: 65px;
+  font-weight: bold;
+  background: white;
+  color: red;
+  padding: 7px 10px;
+  border-radius: 4px;
 }
 .header h1 a {
   text-decoration: none;
@@ -225,19 +238,15 @@ body {
 
 /* The Close Button */
 .close {
-  color: #aaa;
-  float: right;
-  font-size: 28px;
+  color: #000;
+  font-size: 18px;
   font-weight: bold;
-  display: none;
+  display: block;
+  position: absolute;
+  top: 7px;
+  right: 7px;
 }
 
-.close:hover,
-.close:focus {
-  color: black;
-  text-decoration: none;
-  cursor: pointer;
-}
 
 /* related images popup */
 .related img {
@@ -245,19 +254,18 @@ body {
   width: auto;
   padding: 0px 5px 10px 5px;
 }
-.main img {
-  width: 100%;
-  height: auto;
-}
 
 .slideshow-container {
   max-width: 1000px;
   position: relative;
   margin: auto;
 }
-.mySlides {
+.my-slides {
   display: none;
+  height: 250px;
+  width: 100%;
 }
+
 .prev,
 .next {
   cursor: pointer;
@@ -271,6 +279,7 @@ body {
   font-size: 18px;
   transition: 0.6s ease;
   border-radius: 0 3px 3px 0;
+  background: #cccccc;
 }
 
 /* Position the "next button" to the right */
