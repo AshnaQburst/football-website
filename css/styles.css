@@ -38,15 +38,22 @@ body {
 .mt-15 {
   margin-top: 15px;
 }
+.nav-logo {
+  height: 60px;
+  position: absolute;
+  left: 0px;
+  top: 8px;
+  left: 15px;
+}
 .header {
   position: fixed;
   text-align: center;
   width: 100%;
-  background: #d60926;
+  background: #002c5f;
 }
 .header a p {
   position: absolute;
-  top: 0px;
+  top: 7px;
   right: 65px;
   font-weight: bold;
   background: white;
@@ -59,12 +66,18 @@ body {
   color: #fff;
 }
 .body-wrapper {
-  height: 100vh;
+  height: calc(100vh - 120px);
   background: url(../images/body-bg.jpeg);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: 0px 25px;
-  padding: 60px 30px 20px 30px;
+  padding: 100px 30px 20px 30px;
+}
+.logo {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 .col-50 {
   width: 50%;
@@ -84,6 +97,7 @@ body {
   min-height: 20px;
   text-align: center;
   border-radius: 4px;
+  z-index: 1;
 }
 .country-name span {
   vertical-align: sub;
@@ -95,6 +109,7 @@ body {
   background: white;
   position: absolute;
   top: 50%;
+  z-index: -1;
 }
 .country-name-left::before {
   right: -7px;
@@ -104,7 +119,7 @@ body {
 }
 .country-name-quarter-left {
   position: relative;
-  top: 39px;
+  top: 27px;
   left: 11px;
 }
 .country-name-quarter-left::before {
@@ -124,7 +139,7 @@ body {
   right: -10px;
   background: white;
   top: 50%;
-  /* z-index: -1; */
+  z-index: -1;
 }
 
 .country-name-quarter-right {
@@ -136,9 +151,9 @@ body {
   content: "";
   position: absolute;
   width: 1px;
-  height: 74px;
+  height: 62px;
   background: white;
-  top: -22px;
+  top: -10px;
   left: 142px;
 }
 .country-name-quarter-right::after {
@@ -149,16 +164,17 @@ body {
   right: -8px;
   background: white;
   top: 50%;
+  z-index: -1;
 }
 .country-name-semi-left {
-  top: 95px;
+  top: 83px;
   left: 25px;
 }
 .country-name-semi-left::before {
   content: "";
   position: absolute;
   width: 1px;
-  height: 118px;
+  height: 108px;
   background: white;
   top: -40px;
   left: -8px;
@@ -180,9 +196,9 @@ body {
   content: "";
   position: absolute;
   width: 1px;
-  height: 120px;
+  height: 108px;
   background: white;
-  top: -47px;
+  top: -46px;
   left: 147px;
 }
 .country-name-semi-right::after {
@@ -199,7 +215,7 @@ body {
   left: 3%;
 }
 .country-name-final-right {
-  top: 135px;
+  top: 143px;
   right: 5%;
 }
 .score {
@@ -275,6 +291,7 @@ body {
   display: none;
   height: 250px;
   width: 100%;
+  object-fit: cover;
 }
 
 .prev,
