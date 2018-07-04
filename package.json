@@ -1,0 +1,19 @@
+{
+  "name": "football-website",
+  "version": "1.0.0",
+  "description": "A football based website .",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AshnaQburst/football-website.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/AshnaQburst/football-website/issues"
+  },
+  "homepage": "https://github.com/AshnaQburst/football-website#readme"
+}

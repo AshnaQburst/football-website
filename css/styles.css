@@ -45,13 +45,13 @@ body {
   top: 8px;
   left: 15px;
 }
-.header {
+header {
   position: fixed;
   text-align: center;
   width: 100%;
   background: #002c5f;
 }
-.header a p {
+header a p {
   position: absolute;
   top: 7px;
   right: 65px;
@@ -61,7 +61,7 @@ body {
   padding: 7px 10px;
   border-radius: 4px;
 }
-.header h1 a {
+header h1 a {
   text-decoration: none;
   color: #fff;
 }
@@ -291,7 +291,7 @@ body {
   display: none;
   height: 250px;
   width: 100%;
-  object-fit: cover;
+  object-fit: contain;
 }
 
 .prev,
