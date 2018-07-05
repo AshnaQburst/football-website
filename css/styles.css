@@ -2,42 +2,75 @@
   font-family: "dusha";
   src: url(../fonts/fifa-world-cup-russia-2018-dusha/Dusha_-_FIFA_World_Cup_2018.ttf);
 }
+
 body {
   margin: 0px;
   padding: 0px;
   font-family: "dusha";
 }
+
 .text-center {
   text-align: center;
 }
+
 .text-white {
   color: white;
 }
+
 .relative {
   position: relative;
 }
+
+.pull-left {
+  float: left;
+}
+
 .pull-right {
   float: right;
 }
+
 .cp {
   cursor: pointer;
 }
+
 .hide {
   display: none;
 }
+
 .block {
   display: block !important;
 }
+
+.inline-block {
+  display: inline-block;
+}
+
 .no-cursor {
   cursor: not-allowed;
 }
+
 /* spacing */
+
 .mt-30 {
   margin-top: 30px;
 }
+
 .mt-15 {
   margin-top: 15px;
 }
+
+.mt-45 {
+  margin-top: 45px;
+}
+
+.ml-20 {
+  margin-left: 20px;
+}
+
+.mr-20 {
+  margin-right: 20px;
+}
+
 .nav-logo {
   height: 60px;
   position: absolute;
@@ -45,6 +78,7 @@ body {
   top: 8px;
   left: 15px;
 }
+
 header {
   position: fixed;
   text-align: center;
@@ -53,6 +87,7 @@ header {
   z-index: 1;
   top: 0;
 }
+
 header a p {
   position: absolute;
   top: 7px;
@@ -63,187 +98,204 @@ header a p {
   padding: 7px 10px;
   border-radius: 4px;
 }
+
 header h1 a {
   text-decoration: none;
   color: #fff;
 }
+
 .body-wrapper {
-  height: calc(100vh - 120px);
+  min-height: calc(100vh - 120px);
   background: url(../images/body-bg.jpeg);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: 0px 25px;
-  padding: 100px 30px 20px 30px;
+  padding: 100px 90px 20px 90px;
 }
-.container {
+
+.group-a,
+.group-b {
+  width: 50%;
+  float: left;
+}
+
+.name {
+  width: 100px;
+  background: white;
+  text-align: center;
+  color: black;
+  border-radius: 4px;
+  padding: 7px 0px;
+  display: block;
+}
+
+.name::before {
+  content: "";
+  width: 10px;
+  height: 1px;
+  background: white;
+  position: absolute;
+  top: 50%;
+  left: 100%;
+}
+
+.quarter-match {
   position: relative;
+  top: -39px;
+  left: -3px;
+}
+
+.quarter-match label::before {
+  content: "";
+  width: 120px;
+  height: 1px;
+  background: white;
+  position: absolute;
+  top: 48%;
+  left: 10px;
+  z-index: 0;
+}
+
+.quarter-match label::after {
+  content: "";
+  width: 1px;
+  height: 77px;
+  background: white;
+  position: absolute;
+  top: -21px;
+  left: 10px;
+}
+
+.semi-match {
+  position: relative;
+  top: 30px;
+}
+
+.semi-match label::before {
+  content: "";
+  width: 115px;
+  height: 1px;
+  background: white;
+  position: absolute;
+  top: 48%;
+  left: 4px;
+  z-index: 0;
+}
+
+.semi-match label::after {
+  content: "";
+  width: 1px;
+  height: 138px;
+  background: white;
+  position: absolute;
+  top: -54px;
+  left: 4px;
+}
+
+.score-section {
+  left: 25px;
+  position: absolute;
   top: 50%;
   transform: translateY(-50%);
 }
+
+.semi-match .score-section {
+  top: 492%;
+  left: 50px;
+}
+
+.group-b .pre-quarter-match {
+  left: calc(100% - 100px);
+}
+
+.group-b .name::before {
+  left: -10px;
+}
+
+.group-b .quarter-match {
+  top: -39px;
+  left: calc(100% - 325px);
+}
+
+.group-b .quarter-match label::after {
+  left: inherit;
+  right: 7px;
+}
+
+.group-b .semi-match {
+  top: 24px;
+  left: calc(100% - 566px);
+}
+
+.group-b .semi-match label::before {
+  width: 104px;
+  left: 4px;
+}
+
+.group-b .semi-match label::after {
+  top: -48px;
+  left: inherit;
+  right: 12px;
+}
+
+.quarter-match .score-section {
+  top: 255%;
+  left: 49px;
+}
+
+.group-b .quarter-match .score-section,
+.group-b .semi-match .score-section {
+  left: 30px;
+}
+
+.finals {
+  width: 250px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.finals .name::before {
+  content: none;
+}
+
 .logo {
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
 }
-.col-50 {
-  width: 50%;
-  display: inline-block;
-  float: left;
-}
-.col-40 {
-  width: 20%;
-  float: left;
-  display: block;
-}
-.country-name {
-  background: white;
-  padding: 5px 15px;
-  display: inline-block;
-  min-width: 105px;
-  min-height: 20px;
-  text-align: center;
-  border-radius: 4px;
-  z-index: 1;
-}
-.country-name span {
-  vertical-align: sub;
-}
-.country-name::before {
-  content: "";
-  width: 7px;
-  height: 1px;
-  background: white;
-  position: absolute;
-  top: 50%;
-  z-index: -1;
-}
-.country-name-left::before {
-  right: -7px;
-}
-.country-name-right::before {
-  right: 135px;
-}
-.country-name-quarter-left {
-  position: relative;
-  top: 27px;
-  left: 11px;
-}
-.country-name-quarter-left::before {
-  content: "";
-  position: absolute;
-  width: 1px;
-  height: 61px;
-  background: white;
-  top: -11px;
-  left: -8px;
-}
-.country-name-quarter-left::after {
-  content: "";
-  position: absolute;
-  width: 153px;
-  height: 1px;
-  right: -10px;
-  background: white;
-  top: 50%;
-  z-index: -1;
-}
 
-.country-name-quarter-right {
-  position: relative;
-  top: -35px;
-  right: 15px;
-}
-.country-name-quarter-right::before {
-  content: "";
-  position: absolute;
-  width: 1px;
-  height: 62px;
-  background: white;
-  top: -10px;
-  left: 142px;
-}
-.country-name-quarter-right::after {
-  content: "";
-  position: absolute;
-  width: 150px;
-  height: 1px;
-  right: -8px;
-  background: white;
-  top: 50%;
-  z-index: -1;
-}
-.country-name-semi-left {
-  top: 83px;
-  left: 25px;
-}
-.country-name-semi-left::before {
-  content: "";
-  position: absolute;
-  width: 1px;
-  height: 108px;
-  background: white;
-  top: -40px;
-  left: -8px;
-}
-.country-name-semi-left::after {
-  content: "";
-  position: absolute;
-  width: 15px;
-  height: 1px;
-  right: 128px;
-  background: white;
-  top: 50%;
-}
-.country-name-semi-right {
-  top: 27px;
-  left: -35px;
-}
-.country-name-semi-right::before {
-  content: "";
-  position: absolute;
-  width: 1px;
-  height: 108px;
-  background: white;
-  top: -46px;
-  left: 147px;
-}
-.country-name-semi-right::after {
-  content: "";
-  position: absolute;
-  width: 13px;
-  height: 1px;
-  right: -13px;
-  background: white;
-  top: 50%;
-}
-.country-name-final-left {
-  top: 205px;
-  left: 3%;
-}
-.country-name-final-right {
-  top: 143px;
-  right: 5%;
-}
 .score {
   color: #ffffff;
 }
+
+.football-icon {
+  height: 15px;
+  position: relative;
+}
+
 /* gallery list */
+
 .gallery-list {
   padding: 63px 0px 0px 0px;
   list-style: none;
 }
+
 .gallery-list li {
   display: block;
   float: left;
   padding: 5px;
 }
+
 .gallery-list li img {
   height: 150px;
   width: auto;
 }
 
 /* modal popup */
+
 .modal {
   display: none;
   position: fixed;
@@ -258,6 +310,7 @@ header h1 a {
 }
 
 /* Modal Content/Box */
+
 .modal-content {
   background-color: #fefefe;
   margin: 15% auto;
@@ -269,6 +322,7 @@ header h1 a {
 }
 
 /* The Close Button */
+
 .close {
   color: #000;
   font-size: 18px;
@@ -280,6 +334,7 @@ header h1 a {
 }
 
 /* related images popup */
+
 .related img {
   height: 100px;
   width: auto;
@@ -316,14 +371,17 @@ header h1 a {
 }
 
 /* Position the "next button" to the right */
+
 .next {
   right: 0;
   border-radius: 3px 0 0 3px;
 }
+
 .prev:hover,
 .next:hover {
   background-color: rgba(0, 0, 0, 0.8);
 }
+
 .fade {
   -webkit-animation-name: fade;
   -webkit-animation-duration: 1.5s;
@@ -347,63 +405,4 @@ header h1 a {
   to {
     opacity: 1;
   }
-}
-
-.football-score-left {
-  height: 20px;
-  position: absolute;
-  top: 37px;
-  left: 43px;
-}
-.football-score-right {
-  height: 20px;
-  position: absolute;
-  top: -24px;
-  left: inherit;
-  right: 53px;
-}
-.football-icon {
-  height: 15px;
-  position: relative;
-}
-.football-quarter-left,
-.football-quarter-right {
-  top: 60px !important;
-}
-.football-quarter-left .football-icon,
-.football-quarter-right .football-icon,
-.football-score-right .football-icon,
-.football-semi-left .football-icon {
-  top: 5px;
-}
-.football-semi-right {
-  top: 116px;
-  right: -25px;
-}
-.football-semi-left {
-  top: 125px;
-}
-.match-label {
-  position: absolute;
-  color: white;
-}
-.prequarter {
-  top: -25px;
-  left: 30px;
-}
-.prequarter-right {
-  top: -25px;
-  right: 30px;
-}
-.quarter,
-.quarter-right {
-  top: -30px;
-}
-.semi {
-  top: -30px;
-  left: 26px;
-}
-.semi-right {
-  top: -30px;
-  right: 23px;
 }
