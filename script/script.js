@@ -51,7 +51,7 @@ $(document).ready(function() {
 
     // appending related items on the click of a gallery item
     $(".gallery-item").on("click", function() {
-        $(".modal").addClass("block");
+        $("#myModal").addClass("block");
         var pos = $(this).attr("id");
         var index = data.items[pos - 1];
         // appending the modal content
