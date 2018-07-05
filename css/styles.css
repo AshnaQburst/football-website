@@ -50,6 +50,8 @@ header {
   text-align: center;
   width: 100%;
   background: #002c5f;
+  z-index: 1;
+  top: 0;
 }
 header a p {
   position: absolute;
@@ -72,6 +74,11 @@ header h1 a {
   background-size: cover;
   background-position: 0px 25px;
   padding: 100px 30px 20px 30px;
+}
+.container {
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
 }
 .logo {
   position: absolute;
@@ -219,14 +226,11 @@ header h1 a {
   right: 5%;
 }
 .score {
-  position: absolute;
-  top: 8px;
-  right: 8px;
-  color: rgb(205, 8, 36);
+  color: #ffffff;
 }
 /* gallery list */
 .gallery-list {
-  padding: 77px 0px 0px 0px;
+  padding: 63px 0px 0px 0px;
   list-style: none;
 }
 .gallery-list li {
@@ -287,6 +291,7 @@ header h1 a {
   position: relative;
   margin: auto;
 }
+
 .my-slides {
   display: none;
   height: 250px;
@@ -342,4 +347,63 @@ header h1 a {
   to {
     opacity: 1;
   }
+}
+
+.football-score-left {
+  height: 20px;
+  position: absolute;
+  top: 37px;
+  left: 43px;
+}
+.football-score-right {
+  height: 20px;
+  position: absolute;
+  top: -24px;
+  left: inherit;
+  right: 53px;
+}
+.football-icon {
+  height: 15px;
+  position: relative;
+}
+.football-quarter-left,
+.football-quarter-right {
+  top: 60px !important;
+}
+.football-quarter-left .football-icon,
+.football-quarter-right .football-icon,
+.football-score-right .football-icon,
+.football-semi-left .football-icon {
+  top: 5px;
+}
+.football-semi-right {
+  top: 116px;
+  right: -25px;
+}
+.football-semi-left {
+  top: 125px;
+}
+.match-label {
+  position: absolute;
+  color: white;
+}
+.prequarter {
+  top: -25px;
+  left: 30px;
+}
+.prequarter-right {
+  top: -25px;
+  right: 30px;
+}
+.quarter,
+.quarter-right {
+  top: -30px;
+}
+.semi {
+  top: -30px;
+  left: 26px;
+}
+.semi-right {
+  top: -30px;
+  right: 23px;
 }
